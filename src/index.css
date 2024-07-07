@@ -1,3 +1,5 @@
+/* index.css */
+
 /* Include Tailwind CSS directives */
 @tailwind base;
 @tailwind components;
@@ -40,10 +42,14 @@
 
 /* General styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Lora', serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
 }
 
 nav {
@@ -172,21 +178,4 @@ footer .social-media-icons a {
 
 .scroll-to-top:hover {
   background-color: #c00;
-}
-
-/* Active link styles */
-.navbar-link-active {
-  color: #e53e3e; /* Red color */
-  position: relative;
-}
-
-.navbar-link-active::after {
-  content: '';
-  position: absolute;
-  width: 50%;
-  height: 2px;
-  background-color: #e53e3e; /* Red color */
-  bottom: -2px;
-  left: 50%;
-  transform: translateX(-50%);
 }

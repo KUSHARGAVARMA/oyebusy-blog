@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const FourthComponent = ({ categories }) => {
   return (
     <div className="my-8">
-      <div className="flex flex-wrap -mx-4">
+      <div className="flex flex-wrap -mx-4 space-y-3">
         {categories.map(category => (
           <div key={category.name} className="w-full md:w-1/3 px-4 mb-8">
             <h2 className="text-3xl font-bold mb-4">{category.name}</h2>

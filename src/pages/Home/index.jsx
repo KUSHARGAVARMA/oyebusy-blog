@@ -45,8 +45,8 @@ const Home = () => {
     return (
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-8"> {/* Added margin-top (mt-8) */}
        {/* First section */}
-        <div className="flex flex-wrap -mx-4">
-          <div className="w-full md:w-2/3 px-4">
+        <div className="flex flex-wrap -mx-4 space-y-4">
+          <div className="w-full md:w-2/3 px-4 ">
             <FeaturedArticle post={featuredPost} />
           </div>
           <div className="w-full md:w-1/3 px-4 flex flex-col space-y-6">

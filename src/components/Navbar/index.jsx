@@ -37,9 +37,7 @@ const Navbar = () => {
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
     </svg>
   </button>
-  <Link to="/" className="text-gray-900 hover:text-red-600 ml-4">
-    <HiOutlineSearch className="w-6 h-6" />
-  </Link>
+
 </div>
 
         </div>
