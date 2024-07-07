@@ -22,19 +22,23 @@ const CategoryPage = () => {
   console.log('Category Posts:', categoryPosts);
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="my-8 bg-gray-200 p-4 rounded">
-        <h1 className="text-4xl font-bold capitalize">{formattedCategoryName}</h1>
+    <div>
+    <div className="relative overflow-hidden bg-pink-200 py-16 mb-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 className="text-5xl font-bold text-gray-900 capitalize">{formattedCategoryName}</h1>
       </div>
-      <div className="flex flex-wrap -mx-4">
-        <div className="w-full lg:w-2/3 px-4">
+    </div>
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col md:flex-row">
+        <div className="w-full md:w-2/3 px-4">
           <BlogList posts={categoryPosts} />
         </div>
-        <div className="w-full lg:w-1/3 px-4">
+        <div className="w-full md:w-1/3 px-4">
           <SidebarSection />
         </div>
       </div>
     </div>
+  </div>
   );
 };
 

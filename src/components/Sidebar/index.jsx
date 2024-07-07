@@ -5,12 +5,19 @@ import blogData from '../../data /blogData.json'
 const SidebarSection = () => {
   const recentPosts = blogData.slice(0, 3); // Assuming the first three posts are the recent ones
   const popularPosts = blogData.slice(0, 4); // Assuming the first four posts are the popular ones
-  const categories = [
-    { name: 'Environment', count: 5 },
-    { name: 'Fashion', count: 5 },
-    { name: 'Life Style', count: 5 },
-    { name: 'Technology', count: 5 },
-  ];
+
+  // Create a map of categories with the count of posts in each category
+  const categoryCount = blogData.reduce((acc, post) => {
+    const category = post.category;
+    if (!acc[category]) {
+      acc[category] = 0;
+    }
+    acc[category] += 1;
+    return acc;
+  }, {});
+
+  // Convert the categoryCount object into an array
+  const categories = Object.entries(categoryCount).map(([name, count]) => ({ name, count }));
 
   return (
     <div className="space-y-8">
